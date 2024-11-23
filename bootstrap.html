@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+      <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css"> 
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Startsidan</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./bootstrap.html">Bootstrap</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./bulma.html">Bulma</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./publicering.html">Publicering</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <h2 >Bootstrap</h2>
+    <p>Bootstrap är ett open-source CSS-ramverk utvecklat av Twitter, som gör det enklare att designa responsiva och användarvänliga webbsidor.
+        Man kan använda sig av fördesignade komponeneter genom bootstrap så som knappar, formulär, navigationsmenyer etc samt ett antal javacsript-plugins för att lägga till interaktivitetet.
+        Det finns många fördelar med bootsrtap, t.ex finns det inbyggt grid-system som gör det enkelt att skapa webbplatser som funkar på alla skärmstorlekar.
+        Som saggt finns det många förbyggda komponeneter, med hjälp av dem behöver man inte skriva mycket kod på egen hand så det blir riktigt snabbt och enkelt att utveckla sidor. 
+        Man kan anpassa bootsrap efter sin egen behov genom att sktiva egen css så man kan skapa unika profesionella webbplatser enkelt. Men för att göra unika webbplatser måste man anpassa koden efter sin smak och behov annars finns det risken att alla webbplatser gjorda på bootstrap ser likadana ut och det är en stor nackdel.
+        Och det kan vara bootstraps nackdel.
+         Här nedanför har ni länk till Bootstrap:
+    </p>
+    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" class="text-decoration-none  "> Bootstrap!</a>
+
+<h2>forum-tabellen!</h2>
+<!-- Bootstrap Table -->
+<table class="table table-striped table-bordered container text-center table-hover">
+    <thead class="table-primary">
+      <tr>
+        <th>Kategori</th>
+        <th>Namn</th>
+        <th>E-postadress</th>
+        <th>Meddelande</th>
+      </tr>
+    </thead>
+    <tbody>
+            <tr>
+              <td>Fråga</td>
+              <td>Anna Svensson</td>
+              <td>anna.sv@gmail.com</td>
+              <td>Jag undrar hur man kan anpassa egen design med bootstrap?</td>
+            </tr>
+            <tr>
+              <td>Förslag</td>
+              <td>Erik Johansson</td>
+              <td>Johansson.erik@hotmail.com</td>
+              <td>Det skulle vara bättre om primary-color var vit istället för blå!</td>
+            </tr>
+            <tr>
+              <td>Förslag</td>
+              <td>Sara Larsson</td>
+              <td>sara.larsson@hotmail.com</td>
+              <td>Det skulle vara roligt om man kunde anpassa kuden direkt på hemsidan och sedan kopiera koden. </td>
+            </tr>
+            <tr>
+              <td>Fråga</td>
+              <td>Johan Karlsson</td>
+              <td>johan.karlsson@yahoo.com</td>
+              <td>Hur ofta uppdateras Bootstrap?</td>
+            </tr>
+            <tr>
+              <td>Fråga</td>
+              <td>Lisa Andersson</td>
+              <td>Andersson.lisa@gmail.com</td>
+              <td>kan man använda sig av bootstrap för att designa applikationer? </td>
+            </tr>
+    </tbody>
+  </table>
+</div>
+
+    <div class="container mt-5">
+        <h2>Formulär</h2>
+        <form id="messageForm" method="POST" action="http://localhost:3000/save-message">
+          <!-- Inputfält för namn -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Namn</label>
+            <input type="text" class="form-control" id="name" placeholder="Skriv ditt namn" required>
+          </div>
+            <!-- Inputfält för Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Skriv din e-postadress" required>
+          </div>
+          <!-- Textarea för meddelande -->
+          <div class="mb-3">
+            <label for="message" class="form-label">Meddelande</label>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Skriv ett kort meddelande " required></textarea>
+          </div>
+    
+          <!-- Checkbox -->
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="public" name="public"> 
+            <label class="form-check-label" for="public">
+              publikt
+            </label>
+          </div>
+    
+          <!-- Select-lista -->
+          <div class="mb-3">
+            <label for="options" class="form-label">Kategori</label>
+            <select class="form-select" id="options">
+              <option selected disabled>Välj ett alternativ</option>
+              <option value="1">Förslag</option>
+              <option value="2">Fråga</option>
+            </select>
+          </div>
+    
+          <!-- Knapp -->
+          <button type="submit" class="btn btn-primary" id="skicka">Skicka</button>
+        </form>
+      </div>
+          <!-- Meddelande för bekräftelse -->
+    <div id="confirmationMessage" class="alert alert-success mt-4" style="display:none;">
+        Tack för ditt meddelande! Det kommer att publiceras inom 2 arbetsdagar!
+      </div>
+
+      <script>
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Förhindra att formuläret skickas till servern direkt
+    
+          // Visa bekräftelsemeddelande
+          document.getElementById('confirmationMessage').style.display = 'block';
+    
+          // Töm formuläret
+          document.getElementById('messageForm').reset();
+    
+          // Vänta 3 sekunder och dölj meddelandet
+          setTimeout(function() {
+            document.getElementById('confirmationMessage').style.display = 'none';
+          }, 3000);
+        });
+      </script>
+ <!-- Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

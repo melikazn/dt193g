@@ -1,0 +1,57 @@
+h2{
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+p{
+  font-size: 24px;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-family: 'Courier New', Courier, monospace;
+}
+a{
+  font-size: 25px;
+  padding-left: 26px;
+  font-style: italic;
+
+}
+#confirmationMessage{
+  padding: 10px;
+  margin: 10px;
+}
+#skicka{
+  margin-bottom: 10px;
+}
+form{
+  margin: 30px;
+}
+@media (max-width: 576px) { 
+  h2{
+    font-size: 22px;
+  }
+  p{
+    font-size: 18px;
+  }
+  a{
+    font-size: 20px;
+  }
+  form{
+    margin: 10px;
+  }
+ }
+ @media (min-width: 576px) and (max-width: 768px) {   
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+  a {
+    font-size: 22px;
+  } 
+  form{
+    margin: 20px;
+  }
+}
